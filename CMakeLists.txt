@@ -19,9 +19,9 @@ include(cmake/gccx.cmake)
 include(cmake/asm-dom.cmake)
 
 gccx(src/main.cpx)
-add_executable(main src/main.cpp)
-set_property(TARGET main PROPERTY CXX_STANDARD 11)
-target_link_libraries(main PRIVATE asm-dom)
+add_executable(main.js src/main.cpp)
+set_property(TARGET main.js PROPERTY CXX_STANDARD 11)
+target_link_libraries(main.js PRIVATE asm-dom)
 
 # Copy the index.html file into the build directory
 configure_file(
